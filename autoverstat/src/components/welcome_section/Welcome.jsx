@@ -4,7 +4,9 @@ import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 
 import Years from './Years'
+
 import FadeImage from './FadeImage'
+
 
 const Welcome =()=>{
 
@@ -19,10 +21,13 @@ const Welcome =()=>{
                 </Button>
             </Box>
 
-            <Box sx={{display:'flex', justifyContent:'space-evenly', alignItems: 'top', mt:5}}>
-                <Years texto={ `20+ \n Años de Servicio`}/>
+           
+
+            <Box sx={{display:'flex', justifyContent:'space-around', alignItems: 'center', mt:5,
+                 position: 'relative', //TODO > este cambia con vista phone
+            }}>
+                <Years />
                 <FadeImage/>
-                <Years texto={ `20+ \n Años de Servicio`}/>
             </Box>
 
         </>

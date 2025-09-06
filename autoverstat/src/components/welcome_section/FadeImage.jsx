@@ -14,10 +14,10 @@ const FadeImage = () => {
 
     return () => clearInterval(intervalo); // Limpieza al desmontar
   }, []);
-
+// backgroundColor: 'var(--bg-secondary)'
   return (
-    <Box sx={{ position: 'relative', width: 450, height: 300,   
-    overflow: 'hidden' , backgroundColor: 'var(--bg-secondary)', borderRadius: 1.5}}>
+    <Box sx={{ position: 'relative', width: 600, height: 370,   
+    overflow: 'hidden' , paddingLeft:2,  borderRadius: 3}}>
       
       <Fade in={mostrarPrimera} timeout={1000}>
         <Box
