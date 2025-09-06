@@ -17,7 +17,7 @@ const FadeImage = () => {
 
   return (
     <Box sx={{ position: 'relative', width: 450, height: 300,   
-    overflow: 'hidden' , backgroundColor: 'var(--naranja)', borderRadius: 1.5}}>
+    overflow: 'hidden' , backgroundColor: 'var(--bg-secondary)', borderRadius: 1.5}}>
       
       <Fade in={mostrarPrimera} timeout={1000}>
         <Box

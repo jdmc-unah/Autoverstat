@@ -8,6 +8,7 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import IconButton from '@mui/material/IconButton'
 import { useState } from 'react'
 
+import logo from '../../assets/logo.png'
 
 import MenuDrawer from './MenuDrawer'
 
@@ -25,11 +26,11 @@ const Header = ()=>{
 
     
     return(
-        <Box sx={{display: 'flex', justifyContent:'space-between'  }} >
+        <Box sx={{display: 'flex', justifyContent:'space-between', alignItems: 'center'   }} >
            
-           <Box sx={{display: 'flex', justifyContent: 'start',  }}>
-                <img src="#" alt="logo" />
-                <Typography variant="body1" color="var(--negro)">Autoverstat</Typography>
+            <Box sx={{display: 'flex', justifyContent: 'start',  }}>
+                
+                <img src={logo} height='auto' width={150} alt="logo" /> 
             </Box>
 
            {isMobile 
@@ -43,7 +44,7 @@ const Header = ()=>{
                 :
                 <Box sx={{display: 'flex', justifyContent: 'space-between', minWidth: 500  }}>
                     {opciones.map((opcion, indice)=>(
-                        <Button key={indice}  color="var(--negro)" sx={{textTransform:'none'}}>{opcion.titulo}</Button>
+                        <Button key={indice}  sx={{textTransform:'none', color: 'text.primary' }}>{opcion.titulo}</Button>
                     ))}
                 </Box>      
             }

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <Container sx={{marginTop: 2}} >
+      <Container sx={{marginTop: 1}} >
       
         <Header/>
         <Welcome/>

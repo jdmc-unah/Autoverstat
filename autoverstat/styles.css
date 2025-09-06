@@ -6,13 +6,11 @@ html, body {
 
 
 :root{
-    --rojo: #660000;
-    --blanco: #F5F5F5;
-    --grisOscuro: #757575;
-    --negro: #000C14;
-    --naranja: #FFA85C;
-    --grisClaro: #D3E0EE;
-    --blancoPuro: #ffffff;
+    --bg-primary: #024443;
+    --bg-secondary: #03b2b7;
+    --txt-light:  #ffffff;
+    --bg-accent: #c21107;
+  
 }
 
 
