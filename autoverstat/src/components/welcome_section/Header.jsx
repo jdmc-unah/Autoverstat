@@ -1,5 +1,5 @@
 
-import Typography from '@mui/material/Typography'
+
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -8,9 +8,15 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import IconButton from '@mui/material/IconButton'
 import { useState } from 'react'
 
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+
+
 import logo from '../../assets/logo.png'
 
 import MenuDrawer from './MenuDrawer'
+
+
 
 
 const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
@@ -26,31 +32,38 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
 
     
     return(
-        <Box sx={{display: 'flex', justifyContent:'space-between', alignItems: 'center', padding: 2   }} >
-           
-            <Box sx={{display: 'flex', justifyContent: 'start',  }}>
-                
-                <img src={logo} height='auto' width={150} alt="logo" /> 
-            </Box>
+        <>
+            <AppBar position='fixed' sx={{  backgroundColor: '#ffffffff', boxShadow: 3 }} >
+            <Toolbar>
+                    <Box sx={{display: 'flex', justifyContent: 'start', p:1 }}>
+                        
+                        <img src={logo} height='auto' width={150} alt="logo" /> 
+                    </Box>
 
-           {isMobile 
-                ?
-                <Box>
-                    <IconButton aria-label="" onClick={()=>{setOpen(!open)}}>
-                      <MenuRoundedIcon/>
-                    </IconButton>
-                    <MenuDrawer open={open} setOpen={setOpen} opciones={opciones} handleScroll={handleScroll}/>
-                </Box>   
-                :
-                <Box sx={{display: 'flex', justifyContent: 'space-between', minWidth: 500  }}>
-                    {opciones.map((opcion, indice)=>(
-                        <Button key={indice} onClick={()=>handleScroll(opcion.accion)}  sx={{textTransform:'none', color: 'text.primary' }}>{opcion.titulo}</Button>
-                    ))}
-                </Box>      
-            }
-            
-            
-        </Box>
+                    <Box sx={{display:'flex', marginLeft:'auto' }}  >
+                        {isMobile 
+                        ?
+                        <Box>
+                            <IconButton aria-label="" onClick={()=>{setOpen(!open)}}>
+                            <MenuRoundedIcon/>
+                            </IconButton>
+                            <MenuDrawer open={open} setOpen={setOpen} opciones={opciones} handleScroll={handleScroll}/>
+                        </Box>   
+                        :
+                        <Box sx={{display: 'flex', justifyContent:'flex-end', gap: 3  }}>
+                            {opciones.map((opcion, indice)=>(
+                                <Button key={indice} onClick={()=>handleScroll(opcion.accion)}  sx={{textTransform:'none', color: 'text.primary' }}>{opcion.titulo}</Button>
+                            ))}
+                        </Box>      
+                    }
+                    </Box>
+
+                
+                </Toolbar>
+
+            </AppBar>
+            <Toolbar/>
+        </>
     )
 }
 
