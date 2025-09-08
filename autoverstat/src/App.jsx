@@ -1,12 +1,12 @@
 import Box from '@mui/material/Box';
 import { useRef } from 'react';
 
-import Whatsapp from './components/Whatsapp'
+import Whatsapp from './components/SocialMedia'
 import Header from './components/welcome_section/Header'
 import Welcome from './components/welcome_section/Welcome'
 import Services from './components/services/Services'
 import About from './components/about/about';
-
+import Footer from '../src/components/Footer' 
 
 function App() {
 
@@ -26,6 +26,7 @@ function App() {
       <Welcome/>
       <Services servicesRef={servicesRef}/>
       <About aboutRef={aboutRef} />
+      <Footer/>
     </Box>
       
         

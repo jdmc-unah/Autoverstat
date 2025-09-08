@@ -10,14 +10,18 @@ import FadeImage from './FadeImage'
 
 const Welcome =()=>{
 
+    const handleContact =()=>{
+        window.open('https://wa.me/+50498783137',  '_blank', 'noopener,noreferrer')
+    }
+
     return(
         
         <>
             <Box sx={{  mt: 8, display:'flex', alignItems:'center', flexDirection:'column', paddingX: 2}} >
                 <Typography textAlign={'center'} variant="h4" >Donde la experiencia se convierte en excelencia</Typography>
                 <Typography sx={{pt:2, pb:4}} variant="body1" color="text.secondary">Acabados de la mejor calidad para tu vehículo</Typography>
-                <Button   size='medium' variant="contained" sx={{backgroundColor: "var(--bg-primary)", textTransform: 'none'}}>
-                    Empezar
+                <Button  onClick={handleContact}  size='medium' variant="contained" sx={{backgroundColor: "var(--bg-primary)", textTransform: 'none'}}>
+                    Contáctanos
                 </Button>
             </Box>
 
