@@ -21,7 +21,7 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
     // estado del drawer
     const [open, setOpen] = useState(false);
 
-    const opciones = [{titulo : 'Acerca de Nosotros', accion: servicesRef}, {titulo : 'Servicios', accion: servicesRef}, 
+    const opciones = [{titulo : 'Acerca de Nosotros', accion: aboutRef}, {titulo : 'Servicios', accion: servicesRef}, 
     {titulo : 'Contacto', accion: '#'} , {titulo :'Galería', accion: '#'}]
 
     
@@ -39,7 +39,7 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
                     <IconButton aria-label="" onClick={()=>{setOpen(!open)}}>
                       <MenuRoundedIcon/>
                     </IconButton>
-                    <MenuDrawer open={open} setOpen={setOpen} opciones={opciones}/>
+                    <MenuDrawer open={open} setOpen={setOpen} opciones={opciones} handleScroll={handleScroll}/>
                 </Box>   
                 :
                 <Box sx={{display: 'flex', justifyContent: 'space-between', minWidth: 500  }}>

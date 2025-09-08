@@ -6,7 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
-const MenuDrawer = ({open, setOpen, opciones})=> {
+const MenuDrawer = ({open, setOpen, opciones, handleScroll})=> {
   
   const handleClose =()=>{
     setOpen(false);
@@ -18,9 +18,10 @@ const MenuDrawer = ({open, setOpen, opciones})=> {
       <List>
         {opciones.map((opcion, indice)=>(
           <ListItem key={indice} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={()=> handleScroll( opcion.accion)} >
                 <ListItemText primary={opcion.titulo} />
             </ListItemButton>
+            
           </ListItem>
         ))}
       </List>

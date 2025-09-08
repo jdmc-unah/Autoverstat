@@ -9,7 +9,7 @@ const About = ({aboutRef})=>{
 
 
     return(
-        <Box  sx={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+        <Box ref={aboutRef} sx={{display:'flex', alignItems:'center', justifyContent:'center'}}>
             <Box padding={2}  >
                 <Box component={'img'} width={'100%'} height={'100%'}  src={aboutPic}/>
             </Box>

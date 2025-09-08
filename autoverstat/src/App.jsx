@@ -25,7 +25,7 @@ function App() {
       <Header handleScroll={handleScroll} aboutRef={aboutRef} servicesRef={servicesRef} contactRef={contactRef} />
       <Welcome/>
       <Services servicesRef={servicesRef}/>
-      <About ababoutRef={aboutRef} />
+      <About aboutRef={aboutRef} />
     </Box>
       
         
