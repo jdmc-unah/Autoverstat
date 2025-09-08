@@ -21,7 +21,7 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
     // estado del drawer
     const [open, setOpen] = useState(false);
 
-    const opciones = [{titulo : 'Más Información', accion: servicesRef}, {titulo : 'Servicios', accion: servicesRef}, 
+    const opciones = [{titulo : 'Acerca de Nosotros', accion: servicesRef}, {titulo : 'Servicios', accion: servicesRef}, 
     {titulo : 'Contacto', accion: '#'} , {titulo :'Galería', accion: '#'}]
 
     

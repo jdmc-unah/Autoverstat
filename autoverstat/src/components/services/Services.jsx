@@ -14,9 +14,9 @@ const Services = ({servicesRef})=>{
     return(
         
         <Box ref={servicesRef}  sx={{ display:'flex', flexDirection: 'column', alignItems:'center' , justifyContent: 'center',   
-        minHeight: 350 , width: '100%' , backgroundColor: 'var(--bg-primary)', marginTop: 7}}>
+        minHeight: 350 , width: '100%' , backgroundColor: 'var(--bg-primary)', marginTop: 7, paddingY: 5 }}>
             
-            <Typography variant="h5"  paddingY={5} color= 'var(--txt-light)'  >Nuestros Servicios</Typography>
+            <Typography variant="h5"  paddingBottom={5} color= 'var(--txt-light)'  >Nuestros Servicios</Typography>
             
             <Grid
             

@@ -5,6 +5,7 @@ import Whatsapp from './components/Whatsapp'
 import Header from './components/welcome_section/Header'
 import Welcome from './components/welcome_section/Welcome'
 import Services from './components/services/Services'
+import About from './components/about/about';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Header handleScroll={handleScroll} aboutRef={aboutRef} servicesRef={servicesRef} contactRef={contactRef} />
       <Welcome/>
       <Services servicesRef={servicesRef}/>
+      <About ababoutRef={aboutRef} />
     </Box>
       
         
