@@ -26,7 +26,6 @@ const FadeImage = () => {
           
           alt="Imagen 1"
           sx={{
-            pl:1,
             position: 'absolute',
             width: '100%',
             height: '100%',

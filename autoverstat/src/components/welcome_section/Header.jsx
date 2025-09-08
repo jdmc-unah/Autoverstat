@@ -26,7 +26,7 @@ const Header = ()=>{
 
     
     return(
-        <Box sx={{display: 'flex', justifyContent:'space-between', alignItems: 'center'   }} >
+        <Box sx={{display: 'flex', justifyContent:'space-between', alignItems: 'center', padding: 2   }} >
            
             <Box sx={{display: 'flex', justifyContent: 'start',  }}>
                 
