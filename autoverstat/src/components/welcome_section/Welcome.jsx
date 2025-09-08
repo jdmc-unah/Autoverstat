@@ -23,7 +23,7 @@ const Welcome =()=>{
 
            
 
-            <Box sx={{display:'flex', justifyContent:'space-around', alignItems: 'center', mt:5,
+            <Box sx={{display:'flex', justifyContent:'space-around', alignItems: 'center', mt:5, padding: 0,
                  position: 'relative', //TODO > este cambia con vista phone
             }}>
                 <Years />

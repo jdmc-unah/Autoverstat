@@ -3,19 +3,22 @@ import Typography from '@mui/material/Typography'
 import collision from '../../assets/icons/collision.png'
 import paint from '../../assets/icons/touchup.png'
 import car from '../../assets/icons/new-car.png'
+import { useTheme } from '@emotion/react'
+import { useMediaQuery } from '@mui/material'
 
 const Years = ()=>{
 
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+    const mobileStyles =  { display:'flex', flexDirection:'column', justifyContent:'center' , 
+    backgroundColor: 'var(--bg-secondary-trans)', borderRadius: 5, position: 'absolute', top:70, zIndex: 10,}
+    const largeStyles =  { display:'flex', flexDirection:'column', justifyContent:'center' , 
+    backgroundColor: 'var(--bg-secondary)', borderRadius: 5, mr: 2}
+
+
     return(
-        <Box height={250} width={320} 
-        sx={{ display:'flex', flexDirection:'column', justifyContent:'center' , backgroundColor: 'var(--bg-secondary)', borderRadius: 5,
-            
-            //TODO > esto debe cambiar solo para la vista de -900 px ademas del color de fondo que debe ser opaco
-            position: 'absolute',
-            top:2,
-            left: 20,
-            zIndex: 10,
-         }} >
+        <Box height={ isMobile ? 200 : 250} width={ isMobile ?  '90%' : 370} 
+        sx={  isMobile ? mobileStyles : largeStyles} >
             <Typography fontSize={30} fontWeight={'bold'}  textAlign={'center'} variant="body1" color="var(--txt-light)" >
                 +20 años
             </Typography>
