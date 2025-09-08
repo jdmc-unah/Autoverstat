@@ -13,7 +13,7 @@ import logo from '../../assets/logo.png'
 import MenuDrawer from './MenuDrawer'
 
 
-const Header = ()=>{
+const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
     //evalua si es movil para habilitar otro tipo de menu
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'))
@@ -21,7 +21,7 @@ const Header = ()=>{
     // estado del drawer
     const [open, setOpen] = useState(false);
 
-    const opciones = [{titulo : 'Más Información', accion: '#'}, {titulo : 'Servicios', accion: '#'}, 
+    const opciones = [{titulo : 'Más Información', accion: servicesRef}, {titulo : 'Servicios', accion: servicesRef}, 
     {titulo : 'Contacto', accion: '#'} , {titulo :'Galería', accion: '#'}]
 
     
@@ -44,7 +44,7 @@ const Header = ()=>{
                 :
                 <Box sx={{display: 'flex', justifyContent: 'space-between', minWidth: 500  }}>
                     {opciones.map((opcion, indice)=>(
-                        <Button key={indice}  sx={{textTransform:'none', color: 'text.primary' }}>{opcion.titulo}</Button>
+                        <Button key={indice} onClick={()=>handleScroll(opcion.accion)}  sx={{textTransform:'none', color: 'text.primary' }}>{opcion.titulo}</Button>
                     ))}
                 </Box>      
             }

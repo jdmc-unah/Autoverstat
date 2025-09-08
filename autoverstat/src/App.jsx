@@ -1,19 +1,32 @@
-import Container from '@mui/material/Container'
+import Box from '@mui/material/Box';
+import { useRef } from 'react';
+
+import Whatsapp from './components/Whatsapp'
 import Header from './components/welcome_section/Header'
 import Welcome from './components/welcome_section/Welcome'
 import Services from './components/services/Services'
 
+
 function App() {
+
+  const aboutRef = useRef(null)
+  const servicesRef = useRef(null)
+  const contactRef = useRef(null)
+  
+  const handleScroll = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
-      {/* <Container sx={{marginTop: 1}} > */}
+    <Box position={'relative'} >
+      <Whatsapp/>
+      <Header handleScroll={handleScroll} aboutRef={aboutRef} servicesRef={servicesRef} contactRef={contactRef} />
+      <Welcome/>
+      <Services servicesRef={servicesRef}/>
+    </Box>
       
-        <Header/>
-        <Welcome/>
-        <Services/>
         
-      {/* </Container> */}
 
      
     </> 

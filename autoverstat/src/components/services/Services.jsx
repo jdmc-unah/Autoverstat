@@ -9,16 +9,17 @@ import service3 from '../../assets/icons/service3.png'
 
 
 
-const Services = ()=>{
+const Services = ({servicesRef})=>{
 
     return(
         
-        <Box  sx={{ display:'flex', flexDirection: 'column', alignItems:'center' , justifyContent: 'center',   
+        <Box ref={servicesRef}  sx={{ display:'flex', flexDirection: 'column', alignItems:'center' , justifyContent: 'center',   
         minHeight: 350 , width: '100%' , backgroundColor: 'var(--bg-primary)', marginTop: 7}}>
             
             <Typography variant="h5"  paddingY={5} color= 'var(--txt-light)'  >Nuestros Servicios</Typography>
             
             <Grid
+            
             container
             spacing={3}
             direction="row"
