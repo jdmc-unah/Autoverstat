@@ -15,6 +15,7 @@ function App() {
   const aboutRef = useRef(null)
   const servicesRef = useRef(null)
   const galleryRef = useRef(null)
+  const homeRef = useRef(null)
   
   const handleScroll = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
@@ -24,8 +25,8 @@ function App() {
     <>
     <Box position={'relative'} >
       <SocialMedia/>
-      <Header handleScroll={handleScroll} aboutRef={aboutRef} servicesRef={servicesRef} galleryRef={galleryRef}  />
-      <Welcome/>
+      <Header handleScroll={handleScroll} aboutRef={aboutRef} servicesRef={servicesRef} galleryRef={galleryRef} homeRef ={homeRef }  />
+      <Welcome homeRef={homeRef}/>
       <Services servicesRef={servicesRef}/>
       <About aboutRef={aboutRef} />
       <Map/>

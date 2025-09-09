@@ -19,7 +19,8 @@ import MenuDrawer from './MenuDrawer'
 
 
 
-const Header = ({aboutRef, servicesRef, galleryRef,handleScroll})=>{
+
+const Header = ({aboutRef, servicesRef, galleryRef, homeRef ,handleScroll})=>{
     //evalua si es movil para habilitar otro tipo de menu
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'))
@@ -39,8 +40,11 @@ const Header = ({aboutRef, servicesRef, galleryRef,handleScroll})=>{
             <AppBar position='fixed' sx={{  backgroundColor: '#ffffffff', boxShadow: 3 }} >
             <Toolbar>
                     <Box sx={{display: 'flex', justifyContent: 'start', p:1 }}>
+                        <IconButton aria-label="" onClick={()=>  handleScroll(homeRef)}>
+                                                  
+                            <img src={logo} height='auto' width={150} alt="logo" /> 
+                        </IconButton>
                         
-                        <img src={logo} height='auto' width={150} alt="logo" /> 
                     </Box>
 
                     <Box sx={{display:'flex', marginLeft:'auto' }}  >
