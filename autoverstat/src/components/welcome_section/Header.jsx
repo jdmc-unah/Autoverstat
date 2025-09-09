@@ -28,9 +28,12 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
     const [open, setOpen] = useState(false);
 
     const opciones = [{titulo : 'Nosotros', accion: aboutRef}, {titulo : 'Servicios', accion: servicesRef}, 
-    {titulo : 'Contacto', accion: '#'} , {titulo :'Galería', accion: '#'}]
+    {titulo : 'Agendar Cita', accion: ''  } , {titulo :'Galería', accion: '#'}]
 
-    
+    const handleAppointment = ()=>{
+        window.open('https://calendar.app.google/efvcS58HYCodMQbY6', '_blank', 'noopener,noreferrer');
+    }
+
     return(
         <>
             <AppBar position='fixed' sx={{  backgroundColor: '#ffffffff', boxShadow: 3 }} >
@@ -52,7 +55,8 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
                         :
                         <Box sx={{display: 'flex', justifyContent:'flex-end', gap: 3  }}>
                             {opciones.map((opcion, indice)=>(
-                                <Button key={indice} onClick={()=>handleScroll(opcion.accion)}  sx={{textTransform:'none', color: 'text.primary' }}>{opcion.titulo}</Button>
+                                <Button key={indice} onClick={()=> indice == 2 ? handleAppointment() : handleScroll(opcion.accion)}  
+                                sx={{textTransform:'none', color: 'text.primary' }}>{opcion.titulo}</Button>
                             ))}
                         </Box>      
                     }

@@ -27,7 +27,7 @@ import whatsapp from '../assets/icons/whatsapp.png'
 import facebook from '../assets/icons/facebook.png'
 import tiktok from '../assets/icons/tiktok.png'
 import insta from '../assets/icons/instagram.png'
-
+import maps from '../assets/icons/google-maps.png'
 
 
 
@@ -48,11 +48,16 @@ const  Whatsapp=()=> {
         window.open('https://www.instagram.com/autoverstat/?hl=es', '_blank', 'noopener,noreferrer');
     };
 
+    const handleMaps = () => {
+        window.open('https://maps.app.goo.gl/US483QgauLBTdzaL8', '_blank', 'noopener,noreferrer');
+    };
+
     const socials = [
         { icon: <img src={whatsapp} alt="whatsapp" width={40} />  , action: handleWhats },
         { icon: <img src={facebook} alt="facebook" width={40} />, action: handleFB },
         { icon: <img src={tiktok} alt="tiktok" width={40} />, action: handleTT },
         { icon: <img src={insta} alt="insta" width={40} />, action: handleInsta },
+        { icon: <img src={maps} alt="maps" width={40} />, action: handleMaps },
     ];
 
   return (
