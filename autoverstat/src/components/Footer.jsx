@@ -7,7 +7,7 @@ const Footer = ()=>{
 
     return(
         <>
-            <Box  sx={{ display:'flex', paddingLeft: 1, alignItems:'center', justifyContent:'flex-start', backgroundColor: 'var(--bg-primary)' , height: 50}} >
+            <Box  sx={{ display:'flex', paddingLeft: 1, alignItems:'center', justifyContent:'flex-start', backgroundColor: 'text.primary' , height: 50}} >
                 <Typography   variant="body2" color="var(--txt-light)">Desarrollado por</Typography>  
                 <Button
                   color="primary"

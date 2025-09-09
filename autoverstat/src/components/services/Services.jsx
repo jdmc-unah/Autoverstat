@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
-import collision from '../../assets/icons/collision.png'
 import Typography from '@mui/material/Typography'
 
 import service1 from '../../assets/icons/service1.png'

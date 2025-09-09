@@ -19,7 +19,7 @@ import MenuDrawer from './MenuDrawer'
 
 
 
-const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
+const Header = ({aboutRef, servicesRef, galleryRef,handleScroll})=>{
     //evalua si es movil para habilitar otro tipo de menu
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'))
@@ -27,8 +27,8 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
     // estado del drawer
     const [open, setOpen] = useState(false);
 
-    const opciones = [{titulo : 'Nosotros', accion: aboutRef}, {titulo : 'Servicios', accion: servicesRef}, 
-    {titulo : 'Agendar Cita', accion: ''  } , {titulo :'Galería', accion: '#'}]
+    const opciones = [ {titulo : 'Servicios', accion: servicesRef}, {titulo : 'Nosotros', accion: aboutRef},
+    {titulo : 'Agendar Cita', accion: ''  } , {titulo :'Galería', accion: galleryRef}]
 
     const handleAppointment = ()=>{
         window.open('https://calendar.app.google/efvcS58HYCodMQbY6', '_blank', 'noopener,noreferrer');
@@ -50,7 +50,7 @@ const Header = ({aboutRef, servicesRef, contactRef, handleScroll})=>{
                             <IconButton aria-label="" onClick={()=>{setOpen(!open)}}>
                             <MenuRoundedIcon/>
                             </IconButton>
-                            <MenuDrawer open={open} setOpen={setOpen} opciones={opciones} handleScroll={handleScroll}/>
+                            <MenuDrawer open={open} setOpen={setOpen} opciones={opciones} handleAppointment={handleAppointment} handleScroll={handleScroll}/>
                         </Box>   
                         :
                         <Box sx={{display: 'flex', justifyContent:'flex-end', gap: 3  }}>
