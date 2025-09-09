@@ -18,4 +18,18 @@ html, body {
   
 }
 
+/* Estilos para MapTiler */
+.map-wrap {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  width: 90%;
+  height: 450px; 
+  padding-bottom: 20px;
+}
 
+.map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
