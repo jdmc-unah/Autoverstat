@@ -31,7 +31,7 @@ const Gallery = ({galleryRef})=>{
 
     return(
         <Box ref={galleryRef}  sx={{ display:'flex', flexDirection: 'column', alignItems:'center' , justifyContent: 'center',   
-        minHeight: 350 , width: '100%' , backgroundColor: 'var(--bg-primary)', marginTop: 7, paddingY: 5 }}>
+        minHeight: 350 , width: '100%' , backgroundColor: 'var(--bg-primary)', marginTop: 7, pt: 5, pb: 10 }}>
             <Typography variant="h5"  gutterBottom color= 'var(--txt-light)'  >Galería</Typography>
             <ImageList sx={{ width: '80%', height: 500, padding: 2 }} cols={ isMobile ? 2 : 4} rowHeight={250}>
             {itemData.map((item) => (
