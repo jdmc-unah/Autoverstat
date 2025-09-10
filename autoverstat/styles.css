@@ -6,7 +6,8 @@ html, body {
 
 
 :root{
-    --bg-primary: #024443;
+    /* --bg-primary: #024443; */
+    --bg-primary: #440202;
     --bg-primary-light: #085c5a;
     --bg-secondary: #03b2b7;
     --bg-secondary-trans: #03b1b7b3;
