@@ -29,19 +29,21 @@ const Footer = ()=>{
 
                   <Grid  >
                     <Typography variant="body1" color="initial" textAlign={'start'} gutterBottom>Contacto</Typography>
-                    <Typography variant="body2"  color="text.secondary"  textAlign={'start'}>+504 9801-7703</Typography>
-                    <Typography variant="body2"  color="text.secondary"  textAlign={'start'}>+504 9365-4988</Typography>
+                    <Typography variant="body2"  color="text.secondary"  textAlign={'start'}>+504 9801-7703 <br /> +504 9365-4988</Typography>
+                  </Grid>
+
+                  <Grid  >
+                    <Typography variant="body1" color="initial" textAlign={'start'}  gutterBottom>Horario de Atención</Typography>
+                    <Typography  variant="body2" color="text.secondary"  textAlign={'start'}>Lunes a Sabado <br /> 8:00 am - 5:00 pm </Typography>
                   </Grid>
 
                   <Grid  >
                     <Typography variant="body1" color="initial" textAlign={'start'}  gutterBottom>Dirección</Typography>
-                    <Typography width={200} variant="body2" color="text.secondary"  textAlign={'start'}>Barrio Guadalupe Avenida Junior, San Pedro Sula, Cortés</Typography>
+                    <Typography variant="body2" color="text.secondary"  textAlign={'start'}>Barrio Guadalupe, Avenida Junior, <br /> San Pedro Sula, Cortés</Typography>
                   </Grid>
-                  
-                  
 
                   <Grid >
-                    <Box component={'img'} src={logo} height={70} width={150}></Box> 
+                    <Box component={'img'} src={logo} height={70} width={160}></Box> 
                   </Grid>
                  
                   
@@ -52,7 +54,7 @@ const Footer = ()=>{
 
 
                 <Box sx={{ display:'flex', paddingLeft: 1, alignItems:'center', justifyContent:'center'}} >
-                  <Typography   variant="body2" >Autoverstat 2025 - Desarrollado por</Typography>  
+                  <Typography   variant="body2" color='text.secondary' >Autoverstat 2025 - Desarrollado por</Typography>  
                   <Button
                       sx={{textTransform: 'none'}}
                     color="primary"
