@@ -32,7 +32,7 @@ const Header = ({aboutRef, servicesRef, galleryRef, homeRef ,handleScroll})=>{
     {titulo : 'Agendar Cita', accion: ''  } , {titulo :'Galería', accion: galleryRef}]
 
     const handleAppointment = ()=>{
-        window.open('https://calendar.app.google/efvcS58HYCodMQbY6', '_blank', 'noopener,noreferrer');
+        window.open('https://calendar.app.google/DJ2cctYKKM3p4TBj9', '_blank', 'noopener,noreferrer');
     }
 
     return(
